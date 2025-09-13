@@ -77,6 +77,88 @@
             padding: 40px 20px;
             color: #6c757d;
         }
+
+        .debug-panel {
+            margin-top: 16px;
+            border-top: 1px solid #e9ecef;
+            padding-top: 16px;
+        }
+
+        .debug-toggle {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        .debug-toggle:hover {
+            background: #0056b3;
+        }
+
+        .debug-logs {
+            max-height: 200px;
+            overflow-y: auto;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 8px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 11px;
+            display: none;
+        }
+
+        .debug-log-entry {
+            margin-bottom: 8px;
+            padding: 4px;
+            border-radius: 3px;
+            border-left: 3px solid #dee2e6;
+        }
+
+        .debug-log-entry.tab_change {
+            border-left-color: #28a745;
+            background: #f8fff9;
+        }
+
+        .debug-log-entry.focus_change {
+            border-left-color: #ffc107;
+            background: #fffef8;
+        }
+
+        .debug-log-entry.session_record {
+            border-left-color: #17a2b8;
+            background: #f8feff;
+        }
+
+        .debug-log-entry.error {
+            border-left-color: #dc3545;
+            background: #fff8f8;
+        }
+
+        .debug-log-entry.info {
+            border-left-color: #6c757d;
+            background: #f8f9fa;
+        }
+
+        .debug-timestamp {
+            color: #6c757d;
+            font-size: 10px;
+        }
+
+        .debug-message {
+            font-weight: 500;
+            margin: 2px 0;
+        }
+
+        .debug-data {
+            color: #6c757d;
+            font-size: 10px;
+            margin-top: 2px;
+        }
     </style>
 </head>
 <body>
@@ -97,6 +179,11 @@
         <p>Start browsing to see your time data!</p>
     </div>
 
-    <script src="dist/popup.js"></script>
+    <div class="debug-panel">
+        <button id="debug-toggle" class="debug-toggle">Show Debug Logs</button>
+        <div id="debug-logs" class="debug-logs"></div>
+    </div>
+
+    <script type="module" src="dist/popup.js"></script>
 </body>
 </html>
