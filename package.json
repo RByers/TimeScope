@@ -1,7 +1,7 @@
 {
   "name": "timescope",
   "version": "1.0.0",
-  "description": "A Chrome extension to track time spent by domain",
+  "description": "A Chrome extension to track time spent by activity",
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",

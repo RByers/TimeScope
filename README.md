@@ -1,6 +1,6 @@
 # TimeScope
 
-A Chrome extension to track time spent by domain.
+A Chrome extension to track time spent by activity.
 
 ## Setup
 
